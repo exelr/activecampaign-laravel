@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Exelero\ActiveCampaignLaravel;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use Exelero\ActiveCampaignLaravel\Commands\ActiveCampaignLaravelCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class ActiveCampaignLaravelServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('activecampaign-laravel')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_activecampaign-laravel_table')
+            ->hasCommand(ActiveCampaignLaravelCommand::class);
     }
 }
