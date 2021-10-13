@@ -2,9 +2,9 @@
 
 namespace Exelero\ActiveCampaignLaravel;
 
+use Exelero\ActiveCampaignLaravel\Commands\ActiveCampaignLaravelCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Exelero\ActiveCampaignLaravel\Commands\ActiveCampaignLaravelCommand;
 
 class ActiveCampaignLaravelServiceProvider extends PackageServiceProvider
 {

@@ -2,9 +2,9 @@
 
 namespace Exelero\ActiveCampaignLaravel\Tests;
 
+use Exelero\ActiveCampaignLaravel\ActiveCampaignLaravelServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Exelero\ActiveCampaignLaravel\ActiveCampaignLaravelServiceProvider;
 
 class TestCase extends Orchestra
 {
