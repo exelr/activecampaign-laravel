@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Exelero\ActiveCampaignLaravel\Resources;
-
 
 use Exelero\ActiveCampaignLaravel\ActiveCampaign;
 
@@ -13,15 +11,12 @@ use Exelero\ActiveCampaignLaravel\ActiveCampaign;
  */
 class Accounts extends ActiveCampaignResource
 {
-
     public string $endpoint = 'accounts';
-
 
     public function list(): object
     {
         return $this->request()->get($this->endpoint())->object();
     }
-
 
     public function create(string $name, string $url = null): object
     {
@@ -47,7 +42,4 @@ class Accounts extends ActiveCampaignResource
     {
         return $this->response($this->request()->delete($this->endpoint($id))->object());
     }
-
-
-
 }

@@ -17,6 +17,4 @@ class ActiveCampaign
     {
         return $this->accounts;
     }
-
-
 }
