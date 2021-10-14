@@ -45,3 +45,6 @@ jobs:
 
       - name: Execute tests
         run: vendor/bin/pest
+        env:
+          HD_ACTIVE_CAMPAIGN_API_URL: ${{secrets.ACTIVE_CAMPAIGN_API_URL}}
+          HD_ACTIVE_CAMPAIGN_API_KEY: ${{secrets.ACTIVE_CAMPAIGN_API_KEY}}
