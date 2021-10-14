@@ -44,7 +44,7 @@ jobs:
           composer update --${{ matrix.stability }} --prefer-dist --no-interaction
 
       - name: Execute tests
-        run: vendor/bin/pest
         env:
           ACTIVE_CAMPAIGN_API_URL: ${{secrets.ACTIVE_CAMPAIGN_API_URL}}
           ACTIVE_CAMPAIGN_API_KEY: ${{secrets.ACTIVE_CAMPAIGN_API_KEY}}
+        run: vendor/bin/pest
