@@ -7,7 +7,6 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class ActiveCampaignServiceProvider extends PackageServiceProvider
 {
-
     public function configurePackage(Package $package): void
     {
         /*
@@ -24,6 +23,5 @@ class ActiveCampaignServiceProvider extends PackageServiceProvider
         $this->app->bind('active-campaign', function ($app) {
             return $app->make(ActiveCampaign::class);
         });
-
     }
 }

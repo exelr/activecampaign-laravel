@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Exelero\ActiveCampaignLaravel\Resources;
-
 
 use Exception;
 use Exelero\ActiveCampaignLaravel\Exceptions\RequestError;
@@ -11,9 +9,7 @@ use Illuminate\Support\Facades\Http;
 
 abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
 {
-
     public string $endpoint;
-
 
     protected function request(): PendingRequest
     {
@@ -36,9 +32,10 @@ abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
     {
         if (property_exists($object, 'errors')) {
             $error = $object->errors[0];
+
             throw new RequestError($error);
         }
+
         return $object;
     }
-
 }
