@@ -6,7 +6,10 @@ use Exelero\ActiveCampaignLaravel\Resources\Accounts;
 
 class ActiveCampaign
 {
-    public Accounts $accounts;
+    /**
+     * @var Accounts
+     */
+    public $accounts;
 
     public function __construct(Accounts $accounts)
     {

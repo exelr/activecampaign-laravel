@@ -2,11 +2,11 @@
     "name": "exelero/activecampaign-laravel",
     "description": "This is my package activecampaign-laravel",
     "keywords": [
-        "Exelero",
+        "exelero",
         "laravel",
         "activecampaign-laravel"
     ],
-    "homepage": "https://github.com/exelero/activecampaign-laravel",
+    "homepage": "https://github.com/exelr/activecampaign-laravel",
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^8.0",
+        "php": "^7.3|^8",
         "guzzlehttp/guzzle": "^7.3",
         "illuminate/contracts": "^8.37",
         "spatie/laravel-package-tools": "^1.4.3"
