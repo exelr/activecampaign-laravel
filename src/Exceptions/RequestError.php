@@ -3,7 +3,6 @@
 namespace Exelero\ActiveCampaignLaravel\Exceptions;
 
 use ErrorException;
-use JetBrains\PhpStorm\Pure;
 
 class RequestError extends ErrorException
 {
@@ -12,13 +11,11 @@ class RequestError extends ErrorException
 
     public object $error;
 
-    #[Pure]
- public function __construct(object $error)
- {
-     $this->error = $error;
-     parent::__construct($error->title, match ($error->code) {
-         'duplicate' => self::CONFLICT,
-            default => self::BAD_REQUEST,
-     });
- }
+
+    public function __construct(object $error)
+    {
+        $this->error = $error;
+
+        parent::__construct($error->title, $error->code === 'duplicate' ? self::CONFLICT : self::BAD_REQUEST);
+    }
 }
