@@ -12,6 +12,6 @@ class RequestError extends ErrorException
 
     public function __construct(Response $response)
     {
-        parent::__construct($response->json(), $response->status());
+        parent::__construct($response->body(), $response->status());
     }
 }
