@@ -3,19 +3,15 @@
 namespace Exelero\ActiveCampaignLaravel\Exceptions;
 
 use ErrorException;
+use Illuminate\Http\Client\Response;
 
 class RequestError extends ErrorException
 {
     public const BAD_REQUEST = 400;
     public const CONFLICT = 409;
 
-    public object $error;
-
-
-    public function __construct(object $error)
+    public function __construct(Response $response)
     {
-        $this->error = $error;
-
-        parent::__construct($error->title, ($error->code ?? '') === 'duplicate' ? self::CONFLICT : self::BAD_REQUEST);
+        parent::__construct($response->json(), $response->status());
     }
 }
