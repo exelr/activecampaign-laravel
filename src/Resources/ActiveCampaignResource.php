@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Http;
 abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
 {
     protected string $endpoint;
+    protected string $field;
 
     protected function request(): PendingRequest
     {
@@ -63,4 +64,25 @@ abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
     {
         return $this->response($this->request()->delete($this->endpoint($id))->object());
     }
+
+    /**
+     * @throws \Exception
+     */
+    public function create(array $data): object
+    {
+        return $this->response($this->request()->post($this->endpoint(), [
+            $this->field => $data,
+        ])->object());
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function update(string $id, array $data): object
+    {
+        return $this->response($this->request()->put($this->endpoint($id), [
+            $this->field => $data,
+        ])->object());
+    }
+
 }
