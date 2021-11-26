@@ -8,8 +8,8 @@ namespace Exelero\ActiveCampaignLaravel\Resources;
  */
 class Accounts extends ActiveCampaignResource
 {
-    public string $endpoint = 'accounts';
 
+    protected string $endpoint = 'accounts';
 
     public function create(string $name, string $url = null): object
     {

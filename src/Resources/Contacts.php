@@ -2,15 +2,13 @@
 
 namespace Exelero\ActiveCampaignLaravel\Resources;
 
-use Exelero\ActiveCampaignLaravel\ActiveCampaign;
-
 /**
- * Class Contact
+ * Class Contacts
  * @package Exelero\ActiveCampaignLaravel\Resources
  */
-class Contact extends ActiveCampaignResource
+class Contacts extends ActiveCampaignResource
 {
-    public string $endpoint = 'contacts';
+    protected string $endpoint = 'contacts';
 
     /**
      * @throws \Exception

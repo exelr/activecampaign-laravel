@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Http;
  */
 abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
 {
-    public string $endpoint;
+    protected string $endpoint;
 
     protected function request(): PendingRequest
     {
