@@ -16,6 +16,6 @@ class RequestError extends ErrorException
     {
         $this->error = $error;
 
-        parent::__construct($error->title, $error->code === 'duplicate' ? self::CONFLICT : self::BAD_REQUEST);
+        parent::__construct($error->title, ($error->code ?? '') === 'duplicate' ? self::CONFLICT : self::BAD_REQUEST);
     }
 }
