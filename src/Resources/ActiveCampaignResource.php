@@ -51,6 +51,14 @@ abstract class ActiveCampaignResource implements ActiveCampaignResourceInterface
     /**
      * @throws Exception
      */
+    public function get(string $id): object
+    {
+        return $this->response($this->request()->get($this->endpoint($id))->object());
+    }
+
+    /**
+     * @throws Exception
+     */
     public function delete(string $id): object
     {
         return $this->response($this->request()->delete($this->endpoint($id))->object());
